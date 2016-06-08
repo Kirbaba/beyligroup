@@ -79,7 +79,7 @@ gulp.task('sass', function() { // Создаем таск Sass
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         proxy: {
-            target: '' // Директория для сервера - app
+            target: 'beyligroup' // Директория для сервера - app
         },
         ghostMode: {
             clicks: true,
@@ -115,16 +115,6 @@ gulp.task('extend', function () {
 
 });
 
-gulp.task('watch', ['browser-sync', 'compress'], function() {
-    gulp.watch('app/img/**/*', ['img']);
-    gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
-    gulp.watch(['./app/html/*.html'], ['extend']);
-    gulp.watch('./**/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
-    gulp.watch('app/js/*', function() {
-       gulp.run('compress');
-  }, browserSync.reload); // Наблюдение за JS файлами в папке js
-});
-
 gulp.task('img', function() {
     return gulp.src('app/img/**/*')
         .pipe(cache(imagemin({
@@ -141,6 +131,15 @@ gulp.task('img', function() {
         }));
 });
 
+gulp.task('watch', ['browser-sync', 'compress'], function() {
+    gulp.watch('app/img/**/*', ['img']);
+    gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
+    gulp.watch(['./app/html/*.html'], ['extend']);
+    gulp.watch('./**/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
+    gulp.watch('app/js/*', function() {
+       gulp.run('compress');
+  }, browserSync.reload); // Наблюдение за JS файлами в папке js
+});
 
 gulp.task('build', ['img', 'sass', 'scripts'], function() {
 
