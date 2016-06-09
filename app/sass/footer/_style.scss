@@ -1,0 +1,47 @@
+.contacts-footer {
+	@extend .home__projects;
+	position: relative;
+	&__logo {
+		@extend .home__projects_title;
+		padding: 0 15px;
+		height: 120px;
+		position: relative;
+		img {
+			max-width: 100%;
+			vertical-align: middle;
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			   -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			     -o-transform: translateY(-50%);
+			        transform: translateY(-50%);
+		}
+	}
+	&__title {
+		@extend .home__projects_title;
+		height: 120px;
+	}
+	&__item {
+		float: left;
+		width: calc((100% - 95px - 95px) / 5);
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		padding: 15px;
+		i {
+			color: rgba(255, 255, 255, .5);
+			margin-bottom: 15px;
+		}
+		p {
+			font-family: $m300;
+			margin: 0;
+			text: #fff 14px; 
+		}
+		h4 {
+			float: right;
+			font-family: $m300;
+			text: rgba(255,255,255,.5) 14px 1.2;
+		}
+	}
+}

@@ -12,14 +12,14 @@ $m300: 'Museo300Regular';
 }
 
 
+
 @font-face {
-  font-family: 'Museo300Regular';
-  src: url('../fonts/museo300-regular-webfont.eot');
-  src: url('../fonts/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/museo300-regular-webfont.woff') format('woff'),
-       url('../fonts/museo300-regular-webfont.ttf') format('truetype'),
-       url('../fonts/museo300-regular-webfont.svg#museo300') format('svg');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Museo300Regular';
+    src: url('../fonts/Museo300Regular.eot');
+    src: url('../fonts/Museo300Regular.eot') format('embedded-opentype'),
+         url('../fonts/Museo300Regular.woff2') format('woff2'),
+         url('../fonts/Museo300Regular.woff') format('woff'),
+         url('../fonts/Museo300Regular.ttf') format('truetype'),
+         url('../fonts/Museo300Regular.svg#Museo300Regular') format('svg');
 }
 

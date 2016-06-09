@@ -117,7 +117,11 @@
       }
     }
   }
-  
+  &__nav {
+    &_left, &_right {
+      position: absolute;
+    }
+  }
 }
 
 
@@ -298,4 +302,26 @@ right connector from last child*/
     }
   }
   
+}
+
+.icon {
+  display: inline-block;
+  background-image: url('../img/link_slis.png');
+  background-repeat: no-repeat;
+  vertical-align: top;
+  
+  &_link {
+    size:18px;
+    background-position: -18px;
+    &:hover {
+      background-position: 0;
+    }
+  }
+  &_facebook {
+    size: 9px 18px;
+    background-position: -47px;
+    &:hover {
+      background-position: -38px;
+    }
+  }
 }
