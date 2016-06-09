@@ -1,4 +1,5 @@
 $m500: 'Museo500Regular';
+$m300: 'Museo300Regular';
 
 @font-face {
     font-family: 'Museo500Regular';
@@ -9,3 +10,16 @@ $m500: 'Museo500Regular';
          url('../fonts/Museo500Regular.ttf') format('truetype'),
          url('../fonts/Museo500Regular.svg#Museo500Regular') format('svg');
 }
+
+
+@font-face {
+  font-family: 'Museo300Regular';
+  src: url('../fonts/museo300-regular-webfont.eot');
+  src: url('../fonts/museo300-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/museo300-regular-webfont.woff') format('woff'),
+       url('../fonts/museo300-regular-webfont.ttf') format('truetype'),
+       url('../fonts/museo300-regular-webfont.svg#museo300') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+

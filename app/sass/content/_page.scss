@@ -1,0 +1,107 @@
+.page {
+	float: left;
+	width: 100%;
+	&__wrap {
+		float: left;
+		width: 100%;
+		margin: 25px 0;
+	}
+	&__tabs {
+		ul {
+			padding: 0;
+			li {
+				float: left;
+				width: 25%;
+				a {
+				
+				}
+			}
+		}
+		&_target {
+			float: left;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			padding: 10px 0;
+			font-family: $m300;
+			font-size: 24px;
+			color: rgba(255,255,255,.5);
+			text-align: center;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			border-style: dashed;
+			border-color: #DFAF69;
+			border-width: 0 0 1px 0;
+			-webkit-border-radius: 20px 20px 0 0;
+			        border-radius: 20px 20px 0 0;
+			&:hover {
+				color: #F3C786;
+			}
+		}
+		&_active {
+			border-style: dashed;
+			border-color: #DFAF69;
+			border-width: 1px 1px 0 1px;
+			color: #FFF;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	&__box {
+		float: left;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		height: 425px;
+		border-style: dashed;
+		border-color: #DFAF69;
+		border-width: 0 1px 1px 1px;
+		-webkit-border-radius: 0 0 20px 20px;
+		        border-radius: 0 0 20px 20px;
+		color: #FFF;
+		padding: 35px 50px;
+		overflow: hidden;
+	}
+	&__tabcontent {
+		display: none;
+		float: left;
+		width: 100%;
+		&_menu {
+			display: inline-block;
+			width: 20%;
+			margin-right: -4px;
+			vertical-align: top;
+			ul {
+				padding: 0;				
+				float: left;
+				
+				width: 100%;
+				text-align: center;
+				li {
+					margin: 25px 0;
+					a {
+						font-family: $m300;
+						text: #fff underline 18px;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			&_content {
+				@extend %clearfix;
+				display: inline-block;
+				width: 77%;
+			}
+		}
+	}
+
+}
+
+.haqq {
+	display: block;
+}

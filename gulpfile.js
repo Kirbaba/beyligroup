@@ -90,7 +90,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
     });
 });
 
-gulp.task('compress', ['clean'], function() {
+gulp.task('compress',  function() {
   return gulp.src('app/js/*.js')
   .pipe(sourcemaps.init())
   .pipe(concat('script.js'))
@@ -98,15 +98,17 @@ gulp.task('compress', ['clean'], function() {
       suffix: ".min",
       extname: ".js"
   }))
-  .pipe(uglify())
+  .pipe(uglify().on('error', function(e){
+        console.log(e);
+    }))
   .pipe(sourcemaps.write('', { sourceRoot: 'js-source' }))
   .pipe(gulp.dest('js'));
 
 });
 
-gulp.task("clean", function (cb) {
+/*gulp.task("clean", function (cb) {
   rimraf('./js/script.min.js', cb);
-});
+});*/
 
 gulp.task('extend', function () {
     gulp.src('./app/html/*.html')

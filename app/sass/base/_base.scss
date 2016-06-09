@@ -16,6 +16,10 @@ body {
           box-sizing: border-box;
 }
 
+body.body_pages {
+  background-image: url('../img/bg_2.png');
+}
+
 %clearfix {
   *zoom: 1;
   &:after {
