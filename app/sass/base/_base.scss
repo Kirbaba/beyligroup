@@ -1,5 +1,9 @@
 html {
   height: initial;
+  @include respondTo($largeScreen) {
+    height: 100% !important;
+    
+  }
 }
 body {
   min-width: 1200px;

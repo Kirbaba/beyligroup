@@ -1,5 +1,10 @@
-@media only screen and (max-width: 1024px) {
-	
+@media only screen and (min-width: 1400px) {
+	html {
+		height: 100% !important;
+	}
+	.contacts-footer {
+		position: absolute;
+	}
 }
 
 @media only screen and (max-width: 980px) {
